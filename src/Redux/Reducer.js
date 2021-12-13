@@ -1,4 +1,4 @@
-import { FIND_MOVIE } from "./Const";
+import { FIND_MOVIE, MOVIE_LIST } from "./Const";
 
 const initialState={
     allMovies:[],
@@ -13,6 +13,11 @@ export default function reducer(state = initialState, action){
             return {
                 ...state,
                 searchResult: action.payload
+            }
+        case MOVIE_LIST:
+            return{
+                ...state,
+                allMovies: action.payload
             }
         default: return state; 
     }
