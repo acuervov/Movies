@@ -2,28 +2,24 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import ListGroup  from "react-bootstrap/ListGroup";
 import ListGroupItem  from "react-bootstrap/ListGroupItem";
-import logo from '../../Img/Fondo.jpeg'
+import perrito from '../../Img/Perrito.jpeg'
+import Button from 'react-bootstrap/Button'
+import {Link} from 'react-router-dom'
 
-export default function card(){
+export default function card({img,title, description,year, id}){
     return (
-        <Card style={{ width: '18rem'}}>
-            <Card.Img  variant="top" src={logo} />
-            <Card.Body>
-                <Card.Title>Card Title</Card.Title>
+        <Card style={{ width: '18rem', height: '30rem', margin: '15px'}}>
+            <Card.Img  variant="top" src={img || perrito} style={{height: '15rem'}} />
+            <Card.Body style={{height: '5rem'}}>
+                <Card.Title>{title}</Card.Title>
                 <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
+                   {description}
                 </Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
-                <ListGroupItem>Cras justo odio</ListGroupItem>
-                <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-                <ListGroupItem>Vestibulum at eros</ListGroupItem>
+                <ListGroupItem>Released: {year}</ListGroupItem>
             </ListGroup>
-            <Card.Body>
-                <Card.Link href="#">Card Link</Card.Link>
-                <Card.Link href="#">Another Link</Card.Link>
-            </Card.Body>
+            <Button href={'/detail/' + id}>Detail</Button>
         </Card>
     )
 }

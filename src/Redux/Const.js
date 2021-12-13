@@ -1,0 +1,1 @@
+export const FIND_MOVIE = "FIND_MOVIE"

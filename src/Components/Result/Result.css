@@ -1,0 +1,10 @@
+.paginado{
+    position: relative;
+    top: 10px;
+}
+
+.cargando{
+    width: 100px;
+    position:relative;
+    left: 50%;
+}

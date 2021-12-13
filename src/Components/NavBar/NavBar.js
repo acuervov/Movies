@@ -8,7 +8,7 @@ export default function NavBar(){
     return (
         <Navbar bg="dark" expand="lg">
     <Container fluid>
-    <Navbar.Brand href="/home/8" style={{color: 'white'}}>Home</Navbar.Brand>
+    <Navbar.Brand href="/home/0" style={{color: 'white'}}>Home</Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
       <Nav
@@ -16,7 +16,7 @@ export default function NavBar(){
         style={{ maxHeight: '100px' }}
         navbarScroll
       >
-        <Nav.Link href="/favorites/8" style={{color: 'white'}}>Favorites</Nav.Link>
+        <Nav.Link href="/favorites/0" style={{color: 'white'}}>Favorites</Nav.Link>
         <Nav.Link href="/detail/0" style={{color: 'white'}}>Random Movie</Nav.Link>
       </Nav>
       <SearchBar/>
